@@ -1,0 +1,22 @@
+<p-card header="{{ resource.name }}" subheader="{{ resource.targetMultiplayer }}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [numVisible]="5" [showThumbnails]="false" [showIndicators]="true" [changeItemOnIndicatorHover]="true" [showIndicatorsOnItem]="true">
+            <ng-template pTemplate="item" let-item>
+                <div style="width: 800px; height: 400px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                    <img [src]="item.previewImageSrc" style="width: auto; display: block; height: 100%;" />
+                </div>
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+                <div class="p-grid p-nogutter p-justify-center">
+                    <img [src]="item.thumbnailImageSrc" style="display: block;" />
+                </div>
+            </ng-template>
+        </p-galleria>
+
+    </ng-template>
+    <p>{{ resource.description }}</p>
+    <ng-template pTemplate="footer">
+        <p-button (onClick)="confirm()" label="Confirm" icon="pi pi-check"></p-button>
+        <!-- <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button> -->
+    </ng-template>
+</p-card>
