@@ -1,1 +1,21 @@
-<p>header works!</p>
+<div class="p-grid">
+  <div class="p-col-12" style="padding-bottom: 12px">
+    <p-menubar [model]="menuItems">
+      <ng-template pTemplate="start">
+        <img
+          src="https://primefaces.org/primeng/showcase/assets/showcase/images/primeng.svg"
+          height="40"
+          style="margin-right: 0.5rem"
+        />
+      </ng-template>
+      <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search on current page" />
+        <p-dropdown
+          [options]="currencyOptions"
+          (onChange)="setCurrency($event.value)"
+          [style]="{ 'margin-left': '1rem' }"
+        ></p-dropdown>
+      </ng-template>
+    </p-menubar>
+  </div>
+</div>

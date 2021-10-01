@@ -1,6 +1,6 @@
 import { HttpClient , HttpResponse} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Resource } from './Account';
+import { Resource } from './models/Account';
 
 @Injectable({
   providedIn: 'root'

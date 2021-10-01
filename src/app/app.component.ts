@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem, Message, MessageService, PrimeNGConfig, SelectItem } from 'primeng/api'
 import { DialogService } from 'primeng/dynamicdialog';
-import { Resource } from './Account';
+import { Resource } from './models/Account';
 import { ConfirmPurchaseComponent } from './confirm-purchase/confirm-purchase.component';
 import { CreateResourceComponent } from './create-resource/create-resource.component';
 import { ResourceService } from './resource.service';

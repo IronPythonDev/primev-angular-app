@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { Resource } from '../Account';
+import { Resource } from '../models/Account';
 
 @Component({
   selector: 'app-confirm-purchase',
@@ -97,6 +97,6 @@ export class ConfirmPurchaseComponent implements OnInit {
   }
 
   openImages() {
-    this.displayCustom = true;    
+    this.displayCustom = true;
   }
 }

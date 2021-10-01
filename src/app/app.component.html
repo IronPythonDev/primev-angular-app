@@ -1,18 +1,6 @@
 <p-toast [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'500ms'" position="top-right" key="notify-top"></p-toast>
 <p-toast [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'500ms'" position="bottom-right" key="notify-bottom"></p-toast>
-<div class="p-grid">
-    <div class="p-col-12" style="padding-bottom: 12px">
-        <p-menubar [model]="menu">
-            <ng-template pTemplate="start">
-                <img src="https://primefaces.org/primeng/showcase/assets/showcase/images/primeng.svg" height="40" style="margin-right: .5rem;">
-            </ng-template>
-            <ng-template pTemplate="end">
-                <input type="text" pInputText placeholder="Search on current page">
-                <p-dropdown (onChange)="setCurrency($event.value)" [style]="{'margin-left': '1rem'}" [options]="currencyOptions" [(ngModel)]="sortKey" placeholder="UAH"></p-dropdown>
-            </ng-template>
-        </p-menubar>
-    </div>
-</div>
+<app-header></app-header>
 <div style="padding-bottom: 12px">
     <p-card>
         <p-dataView [value]="resources" layout="grid" [paginator]="true" [rows]="8">
