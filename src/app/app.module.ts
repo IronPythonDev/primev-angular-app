@@ -32,6 +32,7 @@ import { CreateResourceComponent } from './create-resource/create-resource.compo
 import {FileUploadModule} from 'primeng/fileupload';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputNumberModule} from 'primeng/inputnumber';
+import {TabMenuModule} from 'primeng/tabmenu';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {InputNumberModule} from 'primeng/inputnumber';
     TooltipModule,
     FileUploadModule,
     InputTextareaModule,
-    InputNumberModule
+    InputNumberModule,
+    TabMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
