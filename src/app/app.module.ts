@@ -20,21 +20,24 @@ import { CardModule } from 'primeng/card';
 import { DataViewModule } from 'primeng/dataview';
 import { DropdownModule } from 'primeng/dropdown';
 import { RatingModule } from 'primeng/rating';
-import {MessagesModule} from 'primeng/messages';
-import {MessageModule} from 'primeng/message';
-import {ToastModule} from 'primeng/toast';
-import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { ConfirmPurchaseComponent } from './confirm-purchase/confirm-purchase.component';
-import {GalleriaModule} from 'primeng/galleria';
-import {SplitButtonModule} from 'primeng/splitbutton';
-import {TooltipModule} from 'primeng/tooltip';
+import { GalleriaModule } from 'primeng/galleria';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { TooltipModule } from 'primeng/tooltip';
 import { CreateResourceComponent } from './create-resource/create-resource.component';
-import {FileUploadModule} from 'primeng/fileupload';
-import {InputTextareaModule} from 'primeng/inputtextarea';
-import {InputNumberModule} from 'primeng/inputnumber';
-import {TabMenuModule} from 'primeng/tabmenu';
+import { FileUploadModule } from 'primeng/fileupload';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { TabMenuModule } from 'primeng/tabmenu';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { BodyCardComponent } from './body-card/body-card.component';
+import { NotifyContainerComponent } from './notify-container/notify-container.component';
+import { UserModule } from './modules/resources/user.module';
 
 @NgModule({
   declarations: [
@@ -42,9 +45,12 @@ import { FooterComponent } from './footer/footer.component';
     ConfirmPurchaseComponent,
     CreateResourceComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BodyCardComponent,
+    NotifyContainerComponent
   ],
   imports: [
+    UserModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

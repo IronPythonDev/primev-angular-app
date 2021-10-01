@@ -10,7 +10,8 @@ export class HeaderComponent implements OnInit {
 
   menuItems: MenuItem[] = [{
     label: 'Resources',
-    icon: 'pi pi-fw pi-file'
+    icon: 'pi pi-fw pi-file',
+    routerLink: ['']
   },
   {
     label: 'User',

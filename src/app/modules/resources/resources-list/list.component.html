@@ -1,0 +1,71 @@
+<p-dataView [value]="resources" layout="grid" [paginator]="true" [rows]="8">
+  <ng-template pTemplate="header">
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      "
+    >
+      <p-dropdown
+        [options]="sortOptions"
+        [(ngModel)]="sortKey"
+        placeholder="Sort By Price"
+      ></p-dropdown>
+      <p-button
+        (onClick)="createResource()"
+        pRipple
+        [style]="{ 'margin-right': '1rem' }"
+        tooltipPosition="left"
+        pTooltip="Add a new resource"
+        label=""
+        icon="pi pi-plus"
+      ></p-button>
+      <!-- <span class="p-input-icon-left ">
+              <i class="pi pi-search"></i>
+              <input type="search" pInputText placeholder="Search by Name">
+          </span> -->
+      <!-- <p-dataViewLayoutOptions></p-dataViewLayoutOptions> -->
+    </div>
+  </ng-template>
+
+  <ng-template let-resource pTemplate="gridItem">
+    <div class="p-col-12 p-md-6 p-lg-3" style="width: 26.73rem; margin: 1rem">
+      <p-card header="Simple Card">
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="https://pbs.twimg.com/media/Ee06jupX0AQ1GCY.png"
+          />
+        </ng-template>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
+          sed consequuntur error repudiandae numquam deserunt quisquam
+          repellat libero asperiores earum nam nobis, culpa ratione quam
+          perferendis esse, cupiditate neque quas!
+        </p>
+        <ng-template pTemplate="footer">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <span style="font-size: 1.5rem; font-weight: 500">45$</span>
+            <p-button
+              (onClick)="addToCart(resource)"
+              label=""
+              icon="pi pi-shopping-cart"
+            ></p-button>
+            <!-- <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button> -->
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </ng-template>
+
+  <!-- <ng-template pTemplate="footer">
+      <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+  </ng-template> -->
+</p-dataView>
