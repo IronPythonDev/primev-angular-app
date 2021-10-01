@@ -33,12 +33,16 @@ import {FileUploadModule} from 'primeng/fileupload';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {TabMenuModule} from 'primeng/tabmenu';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConfirmPurchaseComponent,
-    CreateResourceComponent
+    CreateResourceComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
