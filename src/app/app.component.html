@@ -1,4 +1,5 @@
-<p-toast [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'500ms'" position="top-right" key="notify"></p-toast>
+<p-toast [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'500ms'" position="top-right" key="notify-top"></p-toast>
+<p-toast [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'500ms'" position="bottom-right" key="notify-bottom"></p-toast>
 <div class="p-grid">
     <div class="p-col-12" style="padding-bottom: 12px">
         <p-menubar [model]="menu">
@@ -7,17 +8,18 @@
             </ng-template>
             <ng-template pTemplate="end">
                 <input type="text" pInputText placeholder="Search on current page">
+                <p-dropdown (onChange)="setCurrency($event.value)" [style]="{'margin-left': '1rem'}" [options]="currencyOptions" [(ngModel)]="sortKey" placeholder="UAH"></p-dropdown>
             </ng-template>
         </p-menubar>
     </div>
 </div>
-<div>
+<div style="padding-bottom: 12px">
     <p-card>
         <p-dataView [value]="resources" layout="grid" [paginator]="true" [rows]="8">
             <ng-template pTemplate="header">
                 <div style="display: flex; flex-direction: row; justify-content:space-between;">
                     <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price"></p-dropdown>
-
+                    <p-button (onClick)="createResource()" pRipple [style]="{'margin-right': '1rem'}" tooltipPosition="left" pTooltip="Add a new resource" label="" icon="pi pi-plus"></p-button>
                     <!-- <span class="p-input-icon-left ">
                         <i class="pi pi-search"></i>
                         <input type="search" pInputText placeholder="Search by Name">
@@ -53,3 +55,11 @@
         </p-dataView>
     </p-card>
 </div>
+<p-card>
+    <div style="display: flex; flex-direction: row; justify-content:space-between; align-items: center;">
+        <span>PrimeV 1.0.0b by <b>VladKovalchuk aka SimonMiller or IronPython</b></span>
+        <div>
+            <i onclick="window.open('https://github.com/SimonMillerIO' , '_blank')" class="pi pi-github" style="font-size: 2rem;"></i>
+        </div>
+    </div>
+</p-card>

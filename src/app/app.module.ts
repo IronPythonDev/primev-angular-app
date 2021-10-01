@@ -26,11 +26,18 @@ import {ToastModule} from 'primeng/toast';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { ConfirmPurchaseComponent } from './confirm-purchase/confirm-purchase.component';
 import {GalleriaModule} from 'primeng/galleria';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {TooltipModule} from 'primeng/tooltip';
+import { CreateResourceComponent } from './create-resource/create-resource.component';
+import {FileUploadModule} from 'primeng/fileupload';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputNumberModule} from 'primeng/inputnumber';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConfirmPurchaseComponent
+    ConfirmPurchaseComponent,
+    CreateResourceComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +62,12 @@ import {GalleriaModule} from 'primeng/galleria';
     MessageModule,
     ToastModule,
     DynamicDialogModule,
-    GalleriaModule
+    GalleriaModule,
+    SplitButtonModule,
+    TooltipModule,
+    FileUploadModule,
+    InputTextareaModule,
+    InputNumberModule
   ],
   providers: [],
   bootstrap: [AppComponent]
