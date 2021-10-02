@@ -16,24 +16,7 @@ export class HeaderComponent implements OnInit {
   {
     label: 'User',
     icon: 'pi pi-fw pi-user',
-    items: [
-      {
-        label: 'Current',
-        icon: 'pi pi-fw pi-user'
-      },
-      {
-        label: 'Statistics',
-        icon: 'pi pi-fw pi-dollar'
-      },
-      {
-        label: 'Notifications',
-        icon: 'pi pi-fw pi-bell'
-      },
-      {
-        label: 'Settings',
-        icon: 'pi pi-fw pi-sliders-v'
-      },
-    ]
+    routerLink: ['user' , 'resources']
   },
   {
     label: 'Logout',

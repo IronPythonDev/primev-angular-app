@@ -1,0 +1,51 @@
+<p-table [value]="resources" [paginator]="true" [rows]="7">
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 5rem" pSortableColumn="id">
+        Id <p-sortIcon field="id"></p-sortIcon>
+      </th>
+      <th pSortableColumn="name">
+        Name <p-sortIcon field="name"></p-sortIcon>
+      </th>
+      <th>Image</th>
+      <th pSortableColumn="price">
+        Price <p-sortIcon field="price"></p-sortIcon>
+      </th>
+      <th pSortableColumn="targetMultiplayer">
+        Target MP<p-sortIcon field="targetMultiplayer"></p-sortIcon>
+      </th>
+      <th pSortableColumn="price">
+        Reviews<p-sortIcon field="price"></p-sortIcon>
+      </th>
+      <th pSortableColumn="price">
+        Status<p-sortIcon field="price"></p-sortIcon>
+      </th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-resource>
+    <tr>
+      <td>1</td>
+      <td>{{ resource.name }}</td>
+      <td>
+        <img
+          [src]="resource.photo"
+          [alt]="resource.name"
+          width="100"
+          class="p-shadow-4"
+        />
+      </td>
+      <td>{{ resource.price | currency: "USD" }}</td>
+      <td>{{ resource.targetMultiplayer }}</td>
+      <td>{{ resource.price }}</td>
+      <td><p-badge [value]="'Work'" severity="info"></p-badge></td>
+      <td>
+        <p-splitButton
+          label="Edit"
+          icon="pi pi-pencil"
+          [model]="actionMenuItems"
+        ></p-splitButton>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

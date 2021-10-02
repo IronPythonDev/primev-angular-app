@@ -37,7 +37,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyCardComponent } from './body-card/body-card.component';
 import { NotifyContainerComponent } from './notify-container/notify-container.component';
-import { UserModule } from './modules/resources/user.module';
+import { AllResourcesListComponent } from './all-resources-list/all-resources-list.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import {ChartModule} from 'primeng/chart';
+import { UserResourcesListComponent } from './user-resources-list/user-resources-list.component';
+import { UserSalesListComponent } from './user-sales-list/user-sales-list.component';
+import {RippleModule} from 'primeng/ripple';
+import { UserPurchasesListComponent } from './user-purchases-list/user-purchases-list.component';
+import { UserNotificationsListComponent } from './user-notifications-list/user-notifications-list.component';
+import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 @NgModule({
   declarations: [
@@ -47,10 +55,16 @@ import { UserModule } from './modules/resources/user.module';
     HeaderComponent,
     FooterComponent,
     BodyCardComponent,
-    NotifyContainerComponent
+    NotifyContainerComponent,
+    AllResourcesListComponent,
+    UserProfileComponent,
+    UserResourcesListComponent,
+    UserSalesListComponent,
+    UserPurchasesListComponent,
+    UserNotificationsListComponent,
+    UserSettingsComponent
   ],
   imports: [
-    UserModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -79,7 +93,9 @@ import { UserModule } from './modules/resources/user.module';
     FileUploadModule,
     InputTextareaModule,
     InputNumberModule,
-    TabMenuModule
+    TabMenuModule,
+    ChartModule,
+    RippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

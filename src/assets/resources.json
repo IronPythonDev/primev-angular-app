@@ -23,7 +23,7 @@
         "name": "Taxi System",
         "description": "Taxi System Description",
         "photo": "https://pbs.twimg.com/media/Ee06jupX0AQ1GCY.png",
-        "price": 200,
+        "price": 400,
         "targetMultiplayer": "FiveMs"
     },
     {
