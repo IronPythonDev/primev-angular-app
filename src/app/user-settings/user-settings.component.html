@@ -1,1 +1,37 @@
-<p>user-settings works!</p>
+<br>
+<div class="p-grid p-fluid" style="display: flex; justify-content: center; flex-direction: row; margin-bottom: 1rem;">
+  <div class="p-col-12 p-md-4" style="margin-right: 1rem; flex-grow: 1;">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+      <input type="text" pInputText placeholder="Email" />
+      <button type="button" pButton pRipple icon="pi pi-check" styleClass="p-button-success"></button>
+    </div>
+  </div>
+
+  <div class="p-col-12 p-md-4" style="margin-right: 1rem; flex-grow: 1;">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+      <input type="text" pInputText placeholder="Password" />
+      <button type="button" pButton pRipple icon="pi pi-check" styleClass="p-button-success"></button>
+    </div>
+  </div>
+</div>
+
+<div class="p-grid p-fluid" style="display: flex; justify-content: center; flex-direction: row; margin-bottom: 1rem;">
+  <div class="p-col-12 p-md-4" style="margin-right: 1rem; flex-grow: 1;">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-github"></i></span>
+      <input type="text" pInputText [placeholder]="'Github -> SimonMillerIO'" [disabled]="true"/>
+      <button type="button" pButton pRipple label="Re/Connect" class="p-button-outlined"></button>
+      <button type="button" pButton pRipple icon="pi pi-refresh" styleClass="p-button-success"></button>
+    </div>
+  </div>
+  <div class="p-col-12 p-md-4" style="margin-right: 1rem; flex-grow: 1;">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-google"></i></span>
+      <input type="text" pInputText [placeholder]="'Google -> vladkovalchukvlad1@gmail.com'" [disabled]="true"/>
+      <button type="button" pButton pRipple label="Re/Connect" class="p-button-outlined"></button>
+      <button type="button" pButton pRipple icon="pi pi-refresh" styleClass="p-button-success"></button>
+    </div>
+  </div>
+</div>
