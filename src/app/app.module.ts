@@ -46,6 +46,7 @@ import {RippleModule} from 'primeng/ripple';
 import { UserPurchasesListComponent } from './user-purchases-list/user-purchases-list.component';
 import { UserNotificationsListComponent } from './user-notifications-list/user-notifications-list.component';
 import { UserSettingsComponent } from './user-settings/user-settings.component';
+import { LoginComponent } from './sigin/sigin.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
     UserSalesListComponent,
     UserPurchasesListComponent,
     UserNotificationsListComponent,
-    UserSettingsComponent
+    UserSettingsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
