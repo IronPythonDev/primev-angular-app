@@ -1,1 +1,26 @@
-<p>user-notifications-list works!</p>
+<p-table [value]="notifications" [paginator]="true" [rows]="10">
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 5rem" pSortableColumn="id">
+        Id <p-sortIcon field="id"></p-sortIcon>
+      </th>
+      <th pSortableColumn="message">
+        Message <p-sortIcon field="message"></p-sortIcon>
+      </th>
+      <th pSortableColumn="type">Type<p-sortIcon field="type"></p-sortIcon></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-resource>
+    <tr>
+      <td>{{ resource.id }}</td>
+      <td>{{ resource.message }}</td>
+      <td>
+        <p-badge
+          [value]="resource.type"
+          severity="success"
+          severity="success"
+        ></p-badge>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

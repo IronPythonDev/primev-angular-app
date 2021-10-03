@@ -1,1 +1,34 @@
-<p>user-sales-list works!</p>
+<p-table [value]="sales" [paginator]="true" [rows]="10">
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 5rem" pSortableColumn="id">
+        Id <p-sortIcon field="id"></p-sortIcon>
+      </th>
+      <th pSortableColumn="name">
+        Name <p-sortIcon field="name"></p-sortIcon>
+      </th>
+      <th pSortableColumn="price">
+        Cost <p-sortIcon field="cost"></p-sortIcon>
+      </th>
+      <th pSortableColumn="targetMultiplayer">
+        Currency<p-sortIcon field="currency"></p-sortIcon>
+      </th>
+      <th pSortableColumn="price">
+        CustomerId<p-sortIcon field="ownerId"></p-sortIcon>
+      </th>
+      <th pSortableColumn="price">
+        Status
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-resource>
+    <tr>
+      <td>1</td>
+      <td>{{ resource.products[0].name }}</td>
+      <td>{{ resource.cost | currency: "USD" }}</td>
+      <td>{{ resource.currency }}</td>
+      <td>{{ resource.ownerId }}</td>
+      <td><p-badge [value]="'OK'" severity="success"></p-badge></td>
+    </tr>
+  </ng-template>
+</p-table>

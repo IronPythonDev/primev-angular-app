@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
+import { Purchase } from '../models/Purchase';
+import { PurchaseService } from '../purchase.service';
 
 @Component({
   selector: 'app-user-purchases-list',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPurchasesListComponent implements OnInit {
 
-  constructor() { }
+  purchases: Purchase[] = [];
 
-  ngOnInit(): void {
+  actionMenuItems: MenuItem[] = [];
+
+  constructor(
+    private purchaseService: PurchaseService
+  ) {
+    this.actionMenuItems = [
+      { label: 'Remove', icon: 'pi pi-times' },
+      { separator: true },
+      { label: 'Hide/Show', icon: 'pi pi-share-alt' }
+    ]
   }
 
+  ngOnInit(): void {
+    this.purchaseService.getPurchases()
+      .then(s => this.purchases = s);
+  }
 }

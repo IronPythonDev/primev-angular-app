@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Sales } from '../models/Sales';
+import { SalesService } from '../sales-service.service';
 
 @Component({
   selector: 'app-user-sales-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSalesListComponent implements OnInit {
 
-  constructor() { }
+  sales: Sales[] = [];
+
+  constructor(
+    private salesService: SalesService
+  ) { }
 
   ngOnInit(): void {
+    this.salesService.getSales()
+      .then(s => this.sales = s);
   }
 
 }
