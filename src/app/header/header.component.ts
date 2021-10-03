@@ -8,20 +8,7 @@ import { MenuItem, SelectItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
 
-  menuItems: MenuItem[] = [{
-    label: 'Resources',
-    icon: 'pi pi-fw pi-file',
-    routerLink: ['']
-  },
-  {
-    label: 'User',
-    icon: 'pi pi-fw pi-user',
-    routerLink: ['user' , 'resources']
-  },
-  {
-    label: 'Logout',
-    icon: 'pi pi-fw pi-power-off'
-  }];
+  menuItems: MenuItem[] = [];
 
   currencyOptions: SelectItem[] = [
     { label: 'UAH', value: 'UAH' },
@@ -32,6 +19,32 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.menuItems = [{
+      label: 'Resources',
+      icon: 'pi pi-fw pi-file',
+      routerLink: ['']
+    }];
+
+    if (localStorage.getItem('accessToken') === null) {
+      this.menuItems.push({
+        label: 'Login',
+        icon: 'pi pi-fw pi-user',
+        routerLink: ['login']
+      })
+    } else {
+      this.menuItems.push(
+        {
+          label: 'User',
+          icon: 'pi pi-fw pi-user',
+          routerLink: ['user', 'resources']
+        },
+        {
+          label: 'Logout',
+          icon: 'pi pi-fw pi-power-off',
+          command: () => localStorage.removeItem('accessToken')
+          // command: eval('() => console.log(localStorage.getItem("accessToken"))')
+        });
+    }
   }
 
   setCurrency(value: string) {
